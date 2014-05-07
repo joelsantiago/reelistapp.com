@@ -1,0 +1,102 @@
+/* General Style */
+body {
+	margin: 0;
+	padding: 0;
+	font: 0.625em/.8125em sans-serif;
+}
+
+#wrap {
+	overflow: hidden;
+	margin: 10px auto;
+	max-width: 960px;
+}
+
+.tile {
+	width: 20%;
+	padding-bottom: 29.5%;
+	color: #FFF;
+	position: relative;
+	float: left;
+}
+
+.tileInner {
+	position: absolute;
+	left: 1px;
+	right: 1px;
+	top: 1px;
+	bottom: 1px;
+	padding: 1px;
+	overflow: hidden;
+}
+
+.tileInner img {
+	width: 100%;
+}
+
+.tileInner .title {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin-bottom: -50px;
+   background: #000;
+   background: rgba(0, 0, 0, 0.5);
+   color: #FFF;
+   padding: 10px;
+   text-align: center;
+   -webkit-transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;
+   -o-transition: all 0.3s ease-out;
+   transition: all 0.3s ease-out;
+}
+
+body.no-touch .tileInner:hover .title, body.touch .tileInner.touchFocus .title {
+   margin-bottom: 0;
+}
+
+/* Phone */
+@media only screen and (max-width: 479px) {
+	/* Tablet view: 2 tiles */
+	#wrap {
+		margin: 10px;
+	}
+
+	.tile {
+		width: 50%;
+		padding-bottom: 74%
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) and (orientation : landscape) {
+    /* Tablet view: 3 tiles */
+	#wrap {
+		margin: 10px;
+	}
+
+	.tile {
+		width: 25%;
+		padding-bottom: 37%;
+	}
+}
+
+@media only screen and (max-width: 800px) and (min-width : 480px) {
+	/* Tablet view: 3 tiles */
+	#wrap {
+		margin: 10px;
+	}
+
+	.tile {
+		width: 33.3%;
+		padding-bottom: 49.284%;
+	}
+}
+
+@media only screen and (max-width: 1050px) and (min-width : 801px) {
+	/* Small desktop / ipad view: 4 tiles */
+	.tile {
+		width: 25%;
+		padding-bottom: 37%;
+	}
+}
+
+/* Print
